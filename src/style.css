@@ -1,0 +1,50 @@
+.saitama-theme {
+    /* Ganti warna latar terlalu terang dengan efek overlay yang lebih halus */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('https://wallpapercave.com/wp/wp2389581.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.task-input {
+    border: 2px solid #e11d48;
+    /* merah rose */
+    background-color: #fff;
+    /* putih agar kontras */
+    color: #1f2937;
+    /* abu gelap */
+}
+
+.add-button {
+    background-color: #e11d48;
+    /* merah rose */
+    color: white;
+    box-shadow: 0 4px 6px rgba(225, 29, 72, 0.4);
+}
+
+.complete-button {
+    color: #10b981;
+    /* hijau emerald */
+}
+
+.delete-button {
+    color: #ef4444;
+    /* merah vibrant */
+}
+
+.task-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* semi transparan */
+    color: #111827;
+    /* teks hitam pekat */
+}
+
+.task-item:hover {
+    background-color: #fef3c7;
+    /* tetap cocok dengan tema kuning */
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #1f2937;
+}
