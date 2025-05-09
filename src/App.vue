@@ -55,3 +55,40 @@
   </div>
 </template>
 
+<script setup>
+import { ref, computed } from 'vue'
+
+const newTask = ref('')
+const tasks = ref([])
+const showOnlyIncomplete = ref(false)
+
+const addTask = () => {
+  if (newTask.value.trim() !== '') {
+    tasks.value.push({ text: newTask.value.trim(), completed: false })
+    newTask.value = ''
+  }
+}
+
+const deleteTask = (index) => {
+  tasks.value.splice(index, 1)
+}
+
+const toggleComplete = (index) => {
+  tasks.value[index].completed = !tasks.value[index].completed
+}
+
+const filteredTasks = computed(() => {
+  return showOnlyIncomplete.value
+    ? tasks.value.filter((task) => !task.completed)
+    : tasks.value
+})
+
+const heroRank = computed(() => {
+  const completed = tasks.value.filter(t => t.completed).length
+  if (completed > 15) return 'S'
+  if (completed > 10) return 'A'
+  if (completed > 5) return 'B'
+  return 'C'
+})
+</script>
+
