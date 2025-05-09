@@ -92,3 +92,82 @@ const heroRank = computed(() => {
 })
 </script>
 
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff8dc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+.saitama-theme {
+  background-image: url('https://wallpapercave.com/wp/wp2389581.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: lighten;
+  min-height: 100vh;
+}
+
+.task-input {
+  border: 2px solid #f87171;
+  padding: 10px;
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+}
+
+.add-button {
+  background-color: #dc2626;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.task-item:hover {
+  background-color: #fef3c7;
+}
+
+.complete-button {
+  color: #16a34a;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.delete-button {
+  color: #dc2626;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+</style>
